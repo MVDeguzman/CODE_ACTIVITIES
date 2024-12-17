@@ -1,17 +1,17 @@
-import imp
 
+contin = True
+count = 0
 
-import os
+while contin == True:
+        name = input("Enter a name: ").upper().strip()
 
-isContinue = True
-no=0
-while isContinue == True:
-    ask = input("whould you like to add another triangle (yes / no) -->")
-    if ask.lower() == "no":
-        print("PROGRAM TERMINATED")
-        break
-        isContinue = False
-    else:
-        os.system('cls')
-        no +=1
+        if name == "STOP":
+            print("The loop has now stopped")
+            print(f"You have entered {count} number of names")
+            break
+
+        else:
+            count += 1
+            continue
+
 

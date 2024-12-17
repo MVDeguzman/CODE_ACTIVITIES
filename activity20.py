@@ -1,20 +1,29 @@
+import os
 
 isContinue = True
-no = 0
-while isContinue == True:
-    ask = input("Would you like to add another triangle [Yes / No]: ").strip().upper()
+nt = 0
 
-    if ask == "NO":
-        print("PROGRAM TERMINATED")
+while isContinue == True:
+    ask = input("Do you like to create more triangle (yes / no): ")
+    if ask.lower() == "no":
+        print("Program Terminated")
         break
-    else:
-        no += 1
+        isContinue = False
+        
+    elif ask.lower() == "yes":
+        os.system('cls')
+        nt += 1
         for x in range(1,5):
-                for r in range(1,no + 1):
-                    for y in range(1,x + 1):
-                            print(" ", end= " ")
-                
-                    for z in range(1, x, -1):
-                            print("*", end= " ")
-                    print()    
+            for r in range(1, nt + 1):
+                for y in range(1, x + 1):
+                    print("*", end = " ")
+                for z in range(5, x, -1):
+                    print(" ", end = " ")
+                print(end="")
+            print()
         continue
+    else:
+        print("Invalid answer, please only answer in 'yes' or 'no'")
+        continue
+ 
+print("Invalid input. Please enter 'Yes' or 'No'.")
