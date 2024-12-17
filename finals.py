@@ -1,10 +1,15 @@
+name = input("Enter your name: ").strip()
+print(f"Hello, {name}! Welcome to the program!")
+
 print("THIS PROGRAM IS FOR FINAL PROJECT OF VINCENT FROM BSIT-1A")
 print("TO ENTER TO THE PROGRAM PLEASE ENTER THE PASSWORD")
+
 paword= input("ENTER THE PASSWORD:")
 if paword.lower== "password":
     print("YOU HAVE ACCESS IN THE PROGRAM")
 else:
       print("THE PROGRAM IS TERMINATED")
+
 
 
 def act22():
@@ -16,11 +21,8 @@ def act22():
             "\t \n\t\t\t\t\t\t\t\t\t\t\t\t\b\t*\t \n\t\t\t\t\t\t\t\t\t\t\t\t\b")
 
       def act2():
-            num1 = int(input("Enter a number: "))
-            num2 = int(input("Enter another number: "))
-
-            print(num1, "\nFloor Divided to", num2 ,"=", num1 // num2)
-
+            name= input("please enter your name:")
+            print("Hi" + name)
       def act3():
             fullname = input("please input your full name:")
 
@@ -76,34 +78,20 @@ def act22():
                 "\nThis is my BIONOTE") 
 
       def act4():
-            number1 = eval(input("\n\n\t\t\bEnter A Number: "))
-            number2 = eval(input("\t\t\bEnter Another Number: "))
-
-            add = number1 + number2
-            sub = number1 - number2
-            mul = number1 * number2
-            div = number1 / number2
-            flr_div = number1 // number2
-            exp = number1 ** number2
-            mod = number1 % number2
-
-
-            print("\n\n\t\t\t\tThe sum of",number1,"and",number2,"in addition is",add,
-            "\n\t\t\t\tThe sum of",number1,"and",number2,"in subtraction is",sub,"\n\t\t\t\tThe sum of",number1,
-            "and",number2,"in multiplication is",mul,"\n\t\t\t\tThe sum of",number1,"and",number2,"in division is",div,
-            "\n\t\t\t\tThe sum of",number1,"and",number2,"in floor division is",flr_div,"\n\t\t\t\tThe sum of",number1,"and",number2,
-            "in exponentiation is",exp,"\n\t\t\t\tThe sum of",number1,"and",number2,"in modulus is",mod,"\n\n ")
+            number1= input("enter a numbe:")
+            number2= input("enter a number:")
+            answer= number1 + number2
+            print("The sum of:",number1 + " + " +number2 + " is " + answer)
 
       def act5():
-            temp = float(input("Enter Temperature in Farenheit: "))
-
-            cel = (temp - 32) * 5/9
-
-            print(f"The conversion of {temp} degrees Farenheit is {round(cel, 2)} degrees Celcius.")
+            print("FARENHEIT TO CELSIUS CONVERTER PROGRAM")
+            farenheit= eval(input("enter temperature in farenheit:"))
+            celsius= ((farenheit-32)* 5 )/9
+            print(f"{farenheit}, degrees Farenheit converted to celsius is {round(celsius,2)} degrees")
 
       def act6():
             x = 5
-            print(x)
+            print(x)    
 
             x += 10
             print(x)
@@ -115,40 +103,29 @@ def act22():
             print(x)
 
       def act7():
-            gold = 0
-            min = input("Hi, What is your name: ")
+            gold=0
+            miner= input("Hi, what is ypour name:")
+            isgold= input("is the mineral gold?")
 
-            isgold = input("Is the mineral Gold? [Yes / No]: ").upper().strip()
-
-            if isgold == "YES":
-                  gold += 1
-                  print(f"Hi {min}, Your total number of Gold is: {gold}")
-
-            elif isgold == "NO":
-                  print("Please input a Gold")
-
+            if isgold == "yes":
+                  gold+=1 
+                  print(f" Hi {miner}, Your total number of gold is {gold}")
             else:
-                  print("Wrong Input")
+                  print(f"INVALID")
 
       def act8():
-            pre = int(input("\n\n\tPrelim Score: "))
-            mid = int(input("\n\tMidterm Score: "))
-            semi = int(input("\n\tSemi-Final Score: "))
-            final = int(input("\n\tFinal Score: "))
-            quiz = int(input("\n\tQuiz Score: "))
-            proj = int(input("\n\tProject Score: " ))
+            password= input("enter your password: ")
 
-            fg = (pre * 0.15) + (mid * 0.15) + (semi * 0.15) + (final * 0.15) + (quiz * 0.25) + (proj * 0.15)
+            if password. lower() == "secret":
+                  print(" Access Granted")
+                  print(" Enjoy using the System")
 
+            elif password. lower() == "maspogikaysir12":
 
-            print(f"\n\n\tYour grade is {fg}")
+                  print(" Enjoy using the System")
 
-            if pre > 100:
-                  print("\n\tError. Wrong input")
-            elif fg >= 65:
-                  print("\n\tCongratulations! You have passed the course")
             else:
-                  print("\n\tUnfortunately You Have Failed")
+                  print(" access denied")
 
       def act9():
             age = int(input("Enter your Age: "))
@@ -173,52 +150,57 @@ def act22():
                   print("Enter a your Real Age")
 
       def act10():
-            name= input("Enter your name here:  ")
-            isStud = input ("Are you currently enrolled in DLL? [Yes or No]:  ").upper().strip()
+            name = input(" please enter your name:  ")
+            isstudent = input(" are you a student of DLL:  ")
 
-
-            if isStud == "YES":
-                  yearLev =input("What year are you currently enrolled? \nF- Freshmen \nS-Sophomore"
-                              "\nJ-Junior  \nR-Senior: \nPlease enter your answer here: ").upper().strip()
-                  
-                  if yearLev == "F":
-                        print(f"Hello Freshie {name}, and Welcome to DLL") 
-                  elif yearLev == "S":
-                        print(f"Hello Sophomore {name}, and Welcome to DLL") 
-                  elif yearLev == "J":
-                        print(f"Hello Junior {name}, and Welcome to DLL, konti na lang") 
-                  elif yearLev == "R":
-                        print(f"Hello Senior {name}, Welcome to DLL and congrats pwede kanang humimlay")
-
-            elif isStud == "NO":
-                  print("Thank you, Next")
-
+            if isstudent.lower() == "yes":
+                  yearlevel = input("what year are you currently enrolled?",
+                  "\nf- freshman \ns- sophomore \nr- senior:",
+                  "\n please enter your grade level:  ")
+                        
+                  if yearlevel.lower() == "f":
+                        print(f" hi {name}, freshman, welcome to DLL")
+                        
+                  elif  yearlevel.lower() == "s":
+                        print(f" hi {name}, senior, welcome to DLL")
             else:
-                  print("Wrong Input")
+                        print("thank you for using the system")
+                        
 
       def act11():
             for i in range(1, 11):
                   print("Hello World!")
-                  print("Happy Foundation")
+                  print("Happy world")
                   
                   single = False
 
                   print(f"{single}, That I'm Single")
 
       def act12():
-            for i in range(10, 1, -1):
-                  print(i)
+            print("Enter 10 number \n------------------\n ")
+
+            n1 = 0
+            odd = 0
+            even = 0 
+            for i in range(1, 11):
+                  n2 = eval(input(f"Enter a number {i}: "))
+                  n1 += n2
+                  if n2 % 2 == 0:
+                        even += n2
+                  else:
+                        odd += n2
+
+                  print(f"The total of the number you entered is {n1} ")
+                  print(f"The total of the EVEN number you entered is {even} ")
+                  print(f"The total of the ODD you entered is {odd} ")
 
       def act13():
-            sum = 0
-
-            for i in range(4, 0, -1):
-                  i *= i
-                  sum += i
-
-
-            print(i)
-            print(sum)
+            n1 = eval(input("Enter a number: "))
+            n2 = 1
+            for x in range(n1, 0, -1):
+                  print(x)
+                  n2 *= x
+            print(f"The Factorial of {n1} is {n2}")
 
       def act14():
             for i in range(0,11):
@@ -235,38 +217,26 @@ def act22():
                   print()
 
       def act16():
-            for x in range(1, 11):
-                  for z in range(1, x + 1):
+            for x in range(1, 9, 2):
+                  for y in range(7, x-1, -1):
                         print(" ", end=" ")
-                  for y in range(11, x, -1):
-                        print("*", end= " ")
+                  for z in range(x, 0, -1):
+                        print(" * ", end=" ")  
+                  print()    
 
-                  print()
+            for x in range(1, 9, 2):
+                  for y in range(x+2):
+                        print(" ", end=" ")
+                  for z in range(6, x, -1):
+                        print(" * ", end=" ")  
+                  print()    
 
       def act17():
-            for x in range(6, 0, -1):
-                  for y in range(1, x + 1):
-                        print(" ", end= " ")
-
-                  for z in range(6, x, -1):
-                        print("*", end= " ")
-
-                  for a in range(5, x, -1):
-                        print("*", end= " ")
-
-                  print()
-
-            for x in range(1, 6):
-                  for y in range(1, x + 2):
-                        print(" ", end= " ")
-
-                  for z in range(5, x, -1):
-                        print("*", end= " ")
-
-                  for a in range(4, x, -1):
-                        print("*", end= " ")
-
-                  print()
+            column= eval(input("enter a number--->"))
+            for x in range(1,11):
+                  for y in  range(1, column + 1):
+                        print(f"{x} x {y} = {x * y}", end= "\t")
+            print()
 
       def act18():
             num = int(input("Enter a number of right triangle: ")) 
@@ -300,60 +270,57 @@ def act22():
       def act20():
             isContinue = True
             no = 0
-            while isContinue == True:
+
+            while isContinue: 
                   ask = input("Would you like to add another triangle [Yes / No]: ").strip().upper()
 
-                  if ask == "no":
+                  if ask == "NO":
                         print("PROGRAM TERMINATED")
                         break
-                        isContinue = False
-
+                  elif ask == "YES":
+                        no += 1  
+                        for r in range(1, no + 1):  
+                              print(f"\nTriangle {r}:")
+                              for x in range(1, 5):
+                                    for y in range(1, x + 1): 
+                                          print(" ", end=" ")
+                              for z in range(1, (5 - x) + 1):   
+                                    print("*", end=" ")
+                              print() 
                   else:
-                        no += 1
-                        for x in range(1,5):
-                              for r in range(1,no + 1):
-                                    for y in range(1,x + 1):
-                                          print(" ", end= " ")
-                              
-                                    for z in range(1, x, -1):
-                                          print("*", end= " ")
-                                    print()    
-                        continue
-
+                        print("Invalid input. Please enter 'Yes' or 'No'.")
       def act21():
 
-            def Hallo(name):
-                  print(f"Hello {name}")
+            tuloy = True
+            count = 0
 
-            def act2():
-                  num1 = int(input("Please enter a number:  "))
-                  num2 = int(input("Please enter another number:  "))
-                  answer = num1 + num2
-                  print(f"The sun of {num1} and {num2} is: {answer}")
-
-            while True:
-                  ask = input("Please provide a name: ").upper().strip()
-                  if ask =="STOP":
-                        Hallo(ask)
-
+            while tuloy == True:
+                  name = input("Please enter a name ---> ")
+            
+                  if name.lower() == "stop":
+                        print("Loop has now stopped")
+                        print(f"You have entered {count} number")
+                        break
+                        tuloy = False
+                  else:
+                        count += 1
       def act23():
 
             def add(num1, num2):
-                  """This function adds the first number and second number returnig sum value"""
-                  return print(f"The sum of the numbers are: {num1 + num2}")    
+                  """This function adds the first number and the second number, returning the sum value."""
+                  print(f"The sum of the numbers is ---> {num1 + num2}")
 
-            add()
+            add(1,5)  
 
       def act24():
             
-            from Activity23 import add
-            import Activity1
+            from activity23 import add
+            import activity1
 
             add(21,21)
-            Activity1
+            activity1
 
       def act25():
-
             def list():
 
                   courses = ["BSIT", "BSA", "BSAIS", "BTVTED", "BSSW", "BSPA", "Delete w/o index", "Delete with index"]
@@ -367,119 +334,359 @@ def act22():
 
             list()
 
-
       try:
             compile = True
 
             while compile:
 
                   print("\n\tSELECT FROM THE FOLLOWING PROGRAMS BELOW \n\t"
-                        "\n\tActivity 1 - [1]", "\tActivity 9 - [9]", "\tActivity 17 - [17]"
-                        "\n\tActivity 2 - [2]", "\tActivity 10 - [10]", "\tActivity 18 - [18]"
-                        "\n\tActivity 3 - [3]", "\tActivity 11 - [11]", "\tActivity 20 - [20]"
-                        "\n\tActivity 4 - [4]", "\tActivity 12 - [12]", "\tActivity 21 - [21]"
-                        "\n\tActivity 5 - [5]", "\tActivity 13 - [13]", "\tActivity 23 - [23]"
-                        "\n\tActivity 6 - [6]", "\tActivity 14 - [14]", "\tActivity 24 - [24]"
-                        "\n\tActivity 7 - [7]", "\tActivity 15 - [15]", "\tActivity 25 - [25]"
-                        "\n\tActivity 8 - [8]", "\tActivity 16 - [16]", "\tExit - [0]")
+                        "\n\tPrint statements    - [1]"
+                        "\n\tVariables/Operators - [2]"
+                        "\n\tConditionals        - [3]"
+                        "\n\tLoops               - [4]"
+                        "\n\tList                - [5]"
+                        "\n\tFunctions           - [6]")
+                
 
                   num = int(input("\n\n\tSelect a Program: "))
 
                   if num == 1:
-                        act1()
-                        continue
+      
+                        compile = True
+
+                        while compile:
+
+                              print("\n\tSELECT FROM THE FOLLOWING ACTIVITY BELOW \n\t"
+                                    "\n\tActivity1 - [1]"
+                                    "\n\tActivity2 - [2]"
+                                    "\n\tActivity3 - [3]"
+                                    )
+                        
+
+                              num2 = int(input("\n\n\tSelect Activity: "))
+
+                              if num2 == 1:
+                                    act1()
+                                    continue
+
+                              elif num2 == 2:
+                                    act2()
+                                    continue
+
+                              elif num2 == 3:
+                                    act3()
+                                    continue
+
+                              
+                              elif num2 == 0:
+                                    con = input("Do you want to continue? [Yes] / [No]: ").upper().strip()
+
+                                    if con == "YES":
+                                          print("The program will not be terminated")
+                                          print("Thank you for using the program")
+                                          break
+
+                                    elif con == "NO":
+                                          print("The program will now continue")
+                                          continue
+
+                                    else:
+                                          print("Wrong Input. Invalid Answer")
+
+
+                              elif num2 < 0:
+                                    print("Wrong Input. Must Be A Positive Number.")
+                                    continue
+
+                              else:
+                                    print("Wrong Input. Invalid Answer")
+                                    continue
+
+            
 
                   elif num == 2:
-                        act2()
+                        compile = True
+
+                        while compile:
+
+                              print("\n\tSELECT FROM THE FOLLOWING ACTIVITY BELOW \n\t"
+                                    "\n\tActivity4 - [1]"
+                                    "\n\tActivity5 - [2]"
+                                    "\n\tActivity6 - [3]"
+                                    "\n\tActivity7 - [4]"
+                                    )
+                        
+
+                              num3 = int(input("\n\n\tSelect Activity: "))
+
+                              if num3 == 1:
+                                    act4()
+                                    continue
+
+                              elif num3 == 2:
+                                    act5()
+                                    continue
+
+                              elif num3 == 3:
+                                    act6()
+                                    continue
+
+                              elif num3 == 4:
+                                    act7()
+                                    continue
+
+
+                              
+                              elif num3 == 0:
+                                    con = input("Do you want to continue? [Yes] / [No]: ").upper().strip()
+
+                                    if con == "YES":
+                                          print("The program will not be terminated")
+                                          print("Thank you for using the program")
+                                          break
+
+                                    elif con == "NO":
+                                          print("The program will now continue")
+                                          continue
+
+                                    else:
+                                          print("Wrong Input. Invalid Answer")
+
+
+                              elif num3 < 0:
+                                    print("Wrong Input. Must Be A Positive Number.")
+                                    continue
+
+                              else:
+                                    print("Wrong Input. Invalid Answer")
+                                    continue
+
+            
                         continue
 
                   elif num == 3:
-                        act3()
+                        while compile:
+
+                              print("\n\tSELECT FROM THE FOLLOWING ACTIVITY BELOW \n\t"
+                                    "\n\tActivity8  - [1]"
+                                    "\n\tActivity9  - [2]"
+                                    "\n\tActivity10 - [3]")
+                                    
+                              num4 = int(input("\n\n\tSelect Activity: "))
+
+                              if num4 == 1:
+                                    act8()
+                                    continue
+
+                              elif num4 == 2:
+                                    act9()
+                                    continue
+
+                              elif num4 == 3:
+                                    act10()
+                                    continue
+
+                              
+                              elif num4 == 0:
+                                    con = input("Do you want to continue? [Yes] / [No]: ").upper().strip()
+
+                                    if con == "YES":
+                                          print("The program will not be terminated")
+                                          print("Thank you for using the program")
+                                          break
+
+                                    elif con == "NO":
+                                          print("The program will now continue")
+                                          continue
+
+                                    else:
+                                          print("Wrong Input. Invalid Answer")
+
+
+                              elif num4 < 0:
+                                    print("Wrong Input. Must Be A Positive Number.")
+                                    continue
+
+                              else:
+                                    print("Wrong Input. Invalid Answer")
+                                    continue
                         continue
 
                   elif num == 4:
-                        act4()
+                        while compile:
+
+                              print("\n\tSELECT FROM THE FOLLOWING ACTIVITY BELOW \n\t"
+                                    "\n\tActivity11 - [1]"
+                                    "\n\tActivity12 - [2]"
+                                    "\n\tActivity13 - [3]"
+                                    "\n\tActivity14 - [4]"
+                                    "\n\tActivity15 - [5]"
+                                    "\n\tActivity16 - [6]"
+                                    "\n\tActivity17 - [7]"
+                                    "\n\tActivity18 - [8]"
+                                    "\n\tActivity19 - [9]"
+                                    "\n\tActivity20 - [10]")
+                                    
+                              num5 = int(input("\n\n\tSelect Activity: "))
+
+                              if num5 == 1:
+                                    act11()
+                                    continue
+
+                              elif num5 == 2:
+                                    act12()
+                                    continue
+
+                              elif num5 == 3:
+                                    act13()
+                                    continue
+
+                              elif num5 == 4:
+                                    act14()
+                                    continue
+
+                              elif num5 == 5:
+                                    act15()
+                                    continue
+
+                              elif num5 == 6:
+                                    act16()
+                                    continue
+
+                              elif num5 == 7:
+                                    act17()
+                                    continue
+
+                              elif num5 == 8:
+                                    act18()
+                                    continue
+
+                              elif num5 == 9:
+                                    act19()
+                                    continue
+
+                              elif num5 == 10:
+                                    import activity20
+                                    continue
+                              
+
+                              
+                              elif num5 == 0:
+                                    con = input("Do you want to continue? [Yes] / [No]: ").upper().strip()
+
+                                    if con == "YES":
+                                          print("The program will not be terminated")
+                                          print("Thank you for using the program")
+                                          break
+
+                                    elif con == "NO":
+                                          print("The program will now continue")
+                                          continue
+
+                                    else:
+                                          print("Wrong Input. Invalid Answer")
+
+
+                              elif num5 < 0:
+                                    print("Wrong Input. Must Be A Positive Number.")
+                                    continue
+
+                              else:
+                                    print("Wrong Input. Invalid Answer")
+                                    continue
                         continue
+
 
                   elif num == 5:
-                        act5()
+                        while compile:
+
+                              print("\n\tSELECT FROM THE FOLLOWING ACTIVITY BELOW \n\t"
+                                    "\n\tActivity25  - [1]")
+                                   
+                                    
+                              num6 = int(input("\n\n\tSelect Activity: "))
+
+                              if num6 == 1:
+                                    import activity25
+                                    continue
+
+                              
+                              elif num6 == 0:
+                                    con = input("Do you want to continue? [Yes] / [No]: ").upper().strip()
+
+                                    if con == "YES":
+                                          print("The program will not be terminated")
+                                          print("Thank you for using the program")
+                                          break
+
+                                    elif con == "NO":
+                                          print("The program will now continue")
+                                          continue
+
+                                    else:
+                                          print("Wrong Input. Invalid Answer")
+
+
+                              elif num6 < 0:
+                                    print("Wrong Input. Must Be A Positive Number.")
+                                    continue
+
+                              else:
+                                    print("Wrong Input. Invalid Answer")
+                                    continue
                         continue
+
+      
 
                   elif num == 6:
-                        act6()
+                        while compile:
+
+                              print("\n\tSELECT FROM THE FOLLOWING ACTIVITY BELOW \n\t"
+                                    "\n\tActivit21  - [1]"
+                                    "\n\tActivity23 - [2]"
+                                    "\n\tActivity24 - [3]")
+                               
+                              num7 = int(input("\n\n\tSelect Activity: "))
+
+                              if num7 == 1:
+                                    act21()
+                                    continue
+
+                              elif num7 == 2:
+                                    act23()
+                                    continue
+
+                              elif num7 == 3:
+                                    act24()
+                                    continue
+
+                              elif num7 == 0:
+                                    con = input("Do you want to continue? [Yes] / [No]: ").upper().strip()
+
+                                    if con == "YES":
+                                          print("The program will not be terminated")
+                                          print("Thank you for using the program")
+                                          break
+
+                                    elif con == "NO":
+                                          print("The program will now continue")
+                                          continue
+
+                                    else:
+                                          print("Wrong Input. Invalid Answer")
+
+
+                              elif num7 < 0:
+                                    print("Wrong Input. Must Be A Positive Number.")
+                                    continue
+
+                              else:
+                                    print("Wrong Input. Invalid Answer")
+                                    continue
                         continue
+
                   
-                  elif num == 7:
-                        act7()
-                        continue
-
-                  elif num == 8:
-                        act8()
-                        continue
-
-                  elif num == 9:
-                        act9()
-                        continue
-
-                  elif num == 10:
-                        act10()
-                        continue
-
-                  elif num == 11:
-                        act11()
-                        continue
-
-                  elif num == 12:
-                        act12()
-                        continue
-
-                  elif num == 13:
-                        act13()
-                        continue
-
-                  elif num == 14:
-                        act14()
-                        continue
-                        
-                  elif num == 15:
-                        act15()
-                        continue
-
-                  elif num == 16:
-                        act16()
-                        continue
-
-                  elif num == 17:
-                        act17()
-                        continue
                   
-                  elif num == 18:
-                        act18()
-                        continue
-
-                  elif num == 19:
-                        act19()
-                        continue
-
-                  elif num == 20:
-                        act20()
-                        continue
-
-                  elif num == 21:
-                        act21()
-                        continue
-
-                  elif num == 23:
-                        act23()
-                        continue
-
-                  elif num == 24:
-                        act24()
-                        continue
-
-                  elif num == 25:
-                        act25()
-                        continue
                   
                   elif num == 0:
                         cont = input("Do you want to continue? [Yes] / [No]: ").upper().strip()
